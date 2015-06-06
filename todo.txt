@@ -1,0 +1,9 @@
+﻿DataMigrator:
+- improve metadata for migrated and migrationSequence for richer progress messages.
+- Check for duplicate migration numbers
+- add description to migration attribute (for usage in log)
+- lock DataPointVersions.cfg while migrating
+- allow all migrations to do a precondition check before the migration sequence is started 
+- allow querying migrationsequence properties before migrating
+- instantiate datapoint and migrations through DI container?
+- let DataMigrator do pre-migration setup of all datapointmigrator migration sequences (to make sure all preconditions are meet before attempting any migration)
