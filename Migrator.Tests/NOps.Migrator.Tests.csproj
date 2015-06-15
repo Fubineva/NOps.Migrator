@@ -48,6 +48,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MigrationPointMigratorEventsTests.cs" />
     <Compile Include="MigratorTests.cs" />
     <Compile Include="MigrationPointVersionRegistryTests.cs" />
     <Compile Include="MigrationPointMigratorFailureTests.cs" />

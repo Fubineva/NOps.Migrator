@@ -17,6 +17,8 @@ namespace Fubineva.NOps.Migrator.Tests.TestingConfiguration.MigrationPointANonDo
             s_backupRestored = false;
             s_failBackup = false;
             s_failRestore = false;
+            FailureEventInvoked = true;
+
         }
 
         public static bool BackupInvoked
@@ -55,6 +57,8 @@ namespace Fubineva.NOps.Migrator.Tests.TestingConfiguration.MigrationPointANonDo
             }
         }
 
+        public static bool FailureEventInvoked { get; set; }
+
         public void Backup(string label)
         {
             s_backupInvoked = true;
@@ -67,5 +71,34 @@ namespace Fubineva.NOps.Migrator.Tests.TestingConfiguration.MigrationPointANonDo
             if (s_failRestore) throw new Exception("Restore failed!");
         }
 
+        public void OnMigrationStarting()
+        {
+            ;
+        }
+
+        public void OnMigrationCompleted()
+        {
+            ;
+        }
+
+        public void OnMigrationFailed(long failingMigrationNumber, Exception exception)
+        {
+            FailureEventInvoked = true;
+            FailureEvent = new FailureEvent()
+            {
+                MigrationNumber = failingMigrationNumber,
+                Exception = exception
+            };
+        }
+
+        public static FailureEvent FailureEvent { get; private set; }
+        
+    }
+
+    public class FailureEvent
+    {
+        public long MigrationNumber { get; set; }
+
+        public Exception Exception { get; set; }
     }
 }

@@ -144,6 +144,8 @@ namespace Fubineva.NOps.Migrator.MigrationPoints
 				
 				long newVersion = currentVersion;
 
+				MigrationPointInstance.OnMigrationStarting();
+
 				while(migrationSequence.Any())
 				{
 					var migrationType = migrationSequence.Pop();
@@ -151,7 +153,7 @@ namespace Fubineva.NOps.Migrator.MigrationPoints
 					var instance = (IMigrate)Activator.CreateInstance(migrationType.Type);
 					try
 					{
-						P("Running migration '{0}' to get to version {1}.", migrationType.Type.Name, migrationType.Number);
+						P("Running migration step '{0}' to get to version {1}.", migrationType.Type.Name, migrationType.Number);
 						instance.Up();
 						// only after a succesful Up we will push the migration on the down stack
 						if(typeof(IMigrateDown).IsAssignableFrom(migrationType.Type))
@@ -159,15 +161,21 @@ namespace Fubineva.NOps.Migrator.MigrationPoints
 							_migrated.Push((IMigrateDown)instance);
 						}
 						newVersion = migrationType.Number;
-						P("Migration completed.");
+
+						P("Migration step completed.");
 					}
 					catch(Exception ex)
 					{
+						MigrationPointInstance.OnMigrationFailed(migrationType.Number, ex);
+
 						RevertMigrationSequence(migrationType.Number, ex);
 					}
 				}
+				
+				MigrationPointInstance.OnMigrationCompleted();
 
 				P("MigrationPoint migrated to {0}.", newVersion);
+
 				return newVersion;
 			}
 		}

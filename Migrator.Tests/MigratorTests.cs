@@ -156,7 +156,7 @@ namespace Fubineva.NOps.Migrator.Tests
             Assert.That(migrator.CreatedMigrationPointMigrators["TestingMigrationPointA"].RevertInvoked, Is.True);
             Assert.That(migrator.CreatedMigrationPointMigrators["TestingMigrationPointB"].RevertInvoked, Is.True);
         }
-        
+
         [Test]
         [ExpectedException(typeof(RevertedMigrationFailureException))]
         public void Migrate_running_into_failed_MigrationPoint_should_throw()
@@ -321,12 +321,27 @@ namespace Fubineva.NOps.Migrator.Tests
     {
         public void Backup(string label)
         {
-            throw new NotImplementedException();
+            ;
         }
 
         public void Restore(string label)
         {
-            throw new NotImplementedException();
+            ;
+        }
+
+        public void OnMigrationStarting()
+        {
+            ;
+        }
+
+        public void OnMigrationCompleted()
+        {
+            ;
+        }
+
+        public void OnMigrationFailed(long failingMigrationNumber, Exception exception)
+        {
+            ;
         }
     }
 
@@ -334,12 +349,27 @@ namespace Fubineva.NOps.Migrator.Tests
     {
         public void Backup(string label)
         {
-            throw new NotImplementedException();
+            ;
         }
 
         public void Restore(string label)
         {
-            throw new NotImplementedException();
+            ;
+        }
+
+        public void OnMigrationStarting()
+        {
+            ;
+        }
+
+        public void OnMigrationCompleted()
+        {
+            ;
+        }
+
+        public void OnMigrationFailed(long failingMigrationNumber, Exception exception)
+        {
+            ;
         }
     }
 
@@ -347,12 +377,27 @@ namespace Fubineva.NOps.Migrator.Tests
     {
         public void Backup(string label)
         {
-            throw new NotImplementedException();
+            ;
         }
 
         public void Restore(string label)
         {
-            throw new NotImplementedException();
+            ;
+        }
+
+        public void OnMigrationStarting()
+        {
+            ;
+        }
+
+        public void OnMigrationCompleted()
+        {
+            ;
+        }
+
+        public void OnMigrationFailed(long failingMigrationNumber, Exception exception)
+        {
+            ;
         }
     }
 }

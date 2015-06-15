@@ -1,3 +1,5 @@
+using System;
+
 namespace Fubineva.NOps.Migrator.MigrationPoints
 {
     public interface IMigrationPoint
@@ -5,5 +7,11 @@ namespace Fubineva.NOps.Migrator.MigrationPoints
         void Backup(string label);
 
         void Restore(string label);
+
+        void OnMigrationStarting();
+
+        void OnMigrationCompleted();
+
+        void OnMigrationFailed(long failingMigrationNumber, Exception exception);
     }
 }

@@ -118,6 +118,7 @@ namespace Fubineva.NOps.Migrator.Tests
             // assert
             Assert.IsFalse(MigrationPointAllDown.BackupInvoked, "a backup call was made where it shouldn't have.");
         }
+
     }
 
 }

@@ -1,4 +1,6 @@
-﻿using Fubineva.NOps.Migrator.MigrationPoints;
+﻿using System;
+
+using Fubineva.NOps.Migrator.MigrationPoints;
 
 namespace Fubineva.NOps.Migrator.Tests.TestingConfiguration.MigrationPointAllDown
 {
@@ -41,6 +43,21 @@ namespace Fubineva.NOps.Migrator.Tests.TestingConfiguration.MigrationPointAllDow
         public void Restore(string label)
         {
             s_backupRestored = true;
+        }
+
+        public void OnMigrationStarting()
+        {
+            ;
+        }
+
+        public void OnMigrationCompleted()
+        {
+            ;
+        }
+
+        public void OnMigrationFailed(long failingMigrationNumber, Exception exception)
+        {
+            ;
         }
     }
 }
