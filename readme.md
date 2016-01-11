@@ -66,6 +66,6 @@ For code examples review the unit-test project.
 
 NOps.Migrator 0.3 alpha, june 26th, 2013
 
-License: Apache 2.0
+License: MIT
 
 

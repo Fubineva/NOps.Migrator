@@ -189,3 +189,4 @@ FakesAssemblies/
 
 # project specific ignores
 
+.vs/
