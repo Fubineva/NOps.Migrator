@@ -1,8 +1,8 @@
 ﻿using System;
 
-using Fubineva.NOps.Migrator.MigrationPoints.Migrations;
+using NOps.Migrator.MigrationPoints.Migrations;
 
-namespace Fubineva.NOps.Migrator.Tests.TestingConfiguration.MigrationPointANonDown
+namespace NOps.Migrator.Tests.TestingConfiguration.MigrationPointANonDown
 {
     [Migration(2)]
     public class Migration2 : IMigrate 

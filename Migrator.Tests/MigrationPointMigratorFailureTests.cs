@@ -1,13 +1,13 @@
-﻿using Fubineva.NOps.Migrator.MigrationPoints;
-using Fubineva.NOps.Migrator.Tests.TestingConfiguration.MigrationPointANonDown;
-using Fubineva.NOps.Migrator.Tests.TestingConfiguration.MigrationPointAllDown;
+﻿using NOps.Migrator.MigrationPoints;
+using NOps.Migrator.Tests.TestingConfiguration.MigrationPointAllDown;
+using NOps.Migrator.Tests.TestingConfiguration.MigrationPointANonDown;
 
 using NUnit.Framework;
 
-using Migration1 = Fubineva.NOps.Migrator.Tests.TestingConfiguration.MigrationPointANonDown.Migration1;
-using Migration2 = Fubineva.NOps.Migrator.Tests.TestingConfiguration.MigrationPointANonDown.Migration2;
+using Migration1 = NOps.Migrator.Tests.TestingConfiguration.MigrationPointANonDown.Migration1;
+using Migration2 = NOps.Migrator.Tests.TestingConfiguration.MigrationPointANonDown.Migration2;
 
-namespace Fubineva.NOps.Migrator.Tests
+namespace NOps.Migrator.Tests
 {
     [TestFixture]
     public class MigrationPointMigratorFailureTests

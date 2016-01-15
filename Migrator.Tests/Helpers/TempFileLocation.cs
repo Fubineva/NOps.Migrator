@@ -3,7 +3,7 @@ using System.Globalization;
 using System.IO;
 using System.Reflection;
 
-namespace Fubineva.NOps.Migrator.Tests.Helpers
+namespace NOps.Migrator.Tests.Helpers
 {
 	public class TempFileLocation : IDisposable
 	{

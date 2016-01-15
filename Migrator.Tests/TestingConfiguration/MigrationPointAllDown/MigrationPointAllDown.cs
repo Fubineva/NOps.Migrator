@@ -1,8 +1,8 @@
 ﻿using System;
 
-using Fubineva.NOps.Migrator.MigrationPoints;
+using NOps.Migrator.MigrationPoints;
 
-namespace Fubineva.NOps.Migrator.Tests.TestingConfiguration.MigrationPointAllDown
+namespace NOps.Migrator.Tests.TestingConfiguration.MigrationPointAllDown
 {
     public class MigrationPointAllDown : IMigrationPoint
     {

@@ -4,10 +4,10 @@ using System.Diagnostics;
 using System.Linq;
 using System.Reflection;
 
-using Fubineva.NOps.Migrator.MigrationPoints;
-using Fubineva.NOps.Migrator.Registry;
+using NOps.Migrator.MigrationPoints;
+using NOps.Migrator.Registry;
 
-namespace Fubineva.NOps.Migrator
+namespace NOps.Migrator
 {
 	public class Migrator
 	{

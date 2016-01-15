@@ -7,8 +7,8 @@
     <ProjectGuid>{48148EB6-2037-4F40-A209-0BD70F7E1C2D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Fubineva.NOps.Migrator.Tests</RootNamespace>
-    <AssemblyName>Fubineva.NOps.Migrator.Tests</AssemblyName>
+    <RootNamespace>NOps.Migrator.Tests</RootNamespace>
+    <AssemblyName>NOps.Migrator.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />

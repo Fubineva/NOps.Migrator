@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 
-using Fubineva.NOps.Migrator.MigrationPoints;
-using Fubineva.NOps.Migrator.Registry;
-
 using Moq;
+
+using NOps.Migrator.MigrationPoints;
+using NOps.Migrator.Registry;
 
 using NUnit.Framework;
 
-namespace Fubineva.NOps.Migrator.Tests
+namespace NOps.Migrator.Tests
 {
     [TestFixture]
     public class MigratorTests

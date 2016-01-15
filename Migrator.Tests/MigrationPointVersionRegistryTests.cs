@@ -2,12 +2,12 @@
 using System.IO;
 using System.Reflection;
 
-using Fubineva.NOps.Migrator.Registry;
-using Fubineva.NOps.Migrator.Tests.Helpers;
+using NOps.Migrator.Registry;
+using NOps.Migrator.Tests.Helpers;
 
 using NUnit.Framework;
 
-namespace Fubineva.NOps.Migrator.Tests
+namespace NOps.Migrator.Tests
 {
     [TestFixture]
     public class MigrationPointVersionRegistryTests

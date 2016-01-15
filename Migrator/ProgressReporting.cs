@@ -1,6 +1,6 @@
 using System.Diagnostics;
 
-namespace Fubineva.NOps.Migrator
+namespace NOps.Migrator
 {
     public delegate void ProgressReport(string progressMessage);
 

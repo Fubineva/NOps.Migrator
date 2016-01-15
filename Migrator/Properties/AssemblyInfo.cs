@@ -35,4 +35,4 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyVersion("0.3.0.0")]
 [assembly: AssemblyFileVersion("0.3.0.0")]
 
-[assembly: InternalsVisibleTo("Fubineva.NOps.Migrator.Tests")]
+[assembly: InternalsVisibleTo("NOps.Migrator.Tests")]

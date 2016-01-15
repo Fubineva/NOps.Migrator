@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 
-using Fubineva.NOps.Migrator.MigrationPoints.Migrations;
+using NOps.Migrator.MigrationPoints.Migrations;
 
-namespace Fubineva.NOps.Migrator.MigrationPoints
+namespace NOps.Migrator.MigrationPoints
 {
 	public class MigrationPointMigrator
 	{

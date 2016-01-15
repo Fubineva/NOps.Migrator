@@ -1,6 +1,6 @@
 using System.Runtime.CompilerServices;
 
-namespace Fubineva.NOps.Migrator.Registry
+namespace NOps.Migrator.Registry
 {
     public interface IMigrationPointVersionRegistry
     {

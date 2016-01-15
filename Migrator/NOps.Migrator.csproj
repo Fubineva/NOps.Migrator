@@ -7,8 +7,8 @@
     <ProjectGuid>{313D4589-4680-4028-940E-38E357A35B30}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Fubineva.NOps.Migrator</RootNamespace>
-    <AssemblyName>Fubineva.NOps.Migrator</AssemblyName>
+    <RootNamespace>NOps.Migrator</RootNamespace>
+    <AssemblyName>NOps.Migrator</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />

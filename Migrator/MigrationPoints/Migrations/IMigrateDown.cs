@@ -1,4 +1,4 @@
-namespace Fubineva.NOps.Migrator.MigrationPoints.Migrations
+namespace NOps.Migrator.MigrationPoints.Migrations
 {
     public interface IMigrateDown
     {

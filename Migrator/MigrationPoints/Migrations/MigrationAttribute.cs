@@ -1,6 +1,6 @@
 using System;
 
-namespace Fubineva.NOps.Migrator.MigrationPoints.Migrations
+namespace NOps.Migrator.MigrationPoints.Migrations
 {
     [AttributeUsage(AttributeTargets.Class, AllowMultiple = false, Inherited = true)]
     public class MigrationAttribute : Attribute

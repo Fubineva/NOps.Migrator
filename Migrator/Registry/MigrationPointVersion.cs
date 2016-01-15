@@ -1,6 +1,6 @@
 using System.Xml.Serialization;
 
-namespace Fubineva.NOps.Migrator.Registry
+namespace NOps.Migrator.Registry
 {
     public class MigrationPointVersion
     {

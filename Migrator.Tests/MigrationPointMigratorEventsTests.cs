@@ -1,18 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-using Fubineva.NOps.Migrator.MigrationPoints;
-using Fubineva.NOps.Migrator.Tests.TestingConfiguration.MigrationPointA;
-using Fubineva.NOps.Migrator.Tests.TestingConfiguration.MigrationPointANonDown;
+﻿using NOps.Migrator.MigrationPoints;
+using NOps.Migrator.Tests.TestingConfiguration.MigrationPointA;
+using NOps.Migrator.Tests.TestingConfiguration.MigrationPointANonDown;
 
 using NUnit.Framework;
 
-using Migration1 = Fubineva.NOps.Migrator.Tests.TestingConfiguration.MigrationPointA.Migration1;
-using Migration2 = Fubineva.NOps.Migrator.Tests.TestingConfiguration.MigrationPointA.Migration2;
+using Migration1 = NOps.Migrator.Tests.TestingConfiguration.MigrationPointA.Migration1;
+using Migration2 = NOps.Migrator.Tests.TestingConfiguration.MigrationPointA.Migration2;
 
-namespace Fubineva.NOps.Migrator.Tests
+namespace NOps.Migrator.Tests
 {
     public class MigrationPointMigratorEventsTests
     {

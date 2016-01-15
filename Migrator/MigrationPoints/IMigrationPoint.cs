@@ -1,6 +1,6 @@
 using System;
 
-namespace Fubineva.NOps.Migrator.MigrationPoints
+namespace NOps.Migrator.MigrationPoints
 {
     public interface IMigrationPoint
     {

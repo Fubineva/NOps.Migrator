@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 using System.Xml;
 using System.Xml.Serialization;
 
-namespace Fubineva.NOps.Migrator.Registry
+namespace NOps.Migrator.Registry
 {
 	public class MigrationPointVersionRegistry : IMigrationPointVersionRegistry
 	{

@@ -2,13 +2,13 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-using Fubineva.NOps.Migrator.MigrationPoints;
-using Fubineva.NOps.Migrator.MigrationPoints.Migrations;
-using Fubineva.NOps.Migrator.Tests.TestingConfiguration.MigrationPointA;
+using NOps.Migrator.MigrationPoints;
+using NOps.Migrator.MigrationPoints.Migrations;
+using NOps.Migrator.Tests.TestingConfiguration.MigrationPointA;
 
 using NUnit.Framework;
 
-namespace Fubineva.NOps.Migrator.Tests
+namespace NOps.Migrator.Tests
 {
     [TestFixture]
     public class MigrationPointMigratorSequenceTests

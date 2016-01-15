@@ -1,6 +1,6 @@
-﻿using Fubineva.NOps.Migrator.MigrationPoints.Migrations;
+﻿using NOps.Migrator.MigrationPoints.Migrations;
 
-namespace Fubineva.NOps.Migrator.Tests.TestingConfiguration.MigrationPointA
+namespace NOps.Migrator.Tests.TestingConfiguration.MigrationPointA
 {
     [Migration(2)]
     public class Migration2 : IMigrate 
