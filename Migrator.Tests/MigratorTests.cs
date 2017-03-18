@@ -158,20 +158,18 @@ namespace NOps.Migrator.Tests
         }
 
         [Test]
-        [ExpectedException(typeof(RevertedMigrationFailureException))]
         public void Migrate_running_into_failed_MigrationPoint_should_throw()
         {
             // arrange
             var migrator = new TestingMigrator(_migrationPointTypes, _fakeRegistry.Object);
             migrator.Fail("TestingMigrationPointUnregistered");
 
-            migrator.Migrate();
+            Assert.Throws<RevertedMigrationFailureException>(() => migrator.Migrate());
 
             // assert
         }
 
         [Test]
-        [ExpectedException(typeof(UnrevertedMigrationFailureException))]
         public void Migrate_running_into_failed_MigrationPoint_with_failing_revert_should_throw()
         {
             // arrange
@@ -180,19 +178,14 @@ namespace NOps.Migrator.Tests
             migrator.FailRevert("TestingMigrationPointA");
             migrator.FailRevert("TestingMigrationPointB");
 
-            try
-            {
-                migrator.Migrate();
-            }
-            catch (UnrevertedMigrationFailureException result)
-            {
-                // assert
-                Assert.That(result.InnerException.Message, Is.StringContaining("TestingMigrationPointUnregistered"));
-                Assert.NotNull(result.ReversalExceptions.Single(ex => ex.Message.Contains("TestingMigrationPointA")));
-                Assert.NotNull(result.ReversalExceptions.Single(ex => ex.Message.Contains("TestingMigrationPointB")));
-                throw;
-            }
+            var result = Assert.Throws<UnrevertedMigrationFailureException>(() => 
+                migrator.Migrate()
+            );
             
+            // assert
+            Assert.That(result.InnerException.Message, Does.Contain("TestingMigrationPointUnregistered"));
+            Assert.NotNull(result.ReversalExceptions.Single(ex => ex.Message.Contains("TestingMigrationPointA")));
+            Assert.NotNull(result.ReversalExceptions.Single(ex => ex.Message.Contains("TestingMigrationPointB")));
             
         }
     }

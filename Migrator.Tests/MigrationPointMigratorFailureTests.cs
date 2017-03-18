@@ -26,7 +26,6 @@ namespace NOps.Migrator.Tests
         }
 
         [Test]
-        [ExpectedException(typeof(RevertedMigrationFailureException))]
         public void Migrate_given_a_failing_sequence_should_throw()
         {
             // arrange
@@ -34,21 +33,20 @@ namespace NOps.Migrator.Tests
             Migration2.FailUp = true;
 
             // act
-            migrator.Migrate(0);
+            Assert.Throws<RevertedMigrationFailureException>(() => migrator.Migrate(0));
         
             // assert
         }
 
         [Test]
-        [ExpectedException(typeof(BackupFailureException))]
         public void Migrate_given_a_non_revertable_sequence_and_failing_backup_should_throw()
         {
             // arrange
             var migrator = new MigrationPointMigrator(typeof(MigrationPointANonDown));
             MigrationPointANonDown.FailBackup = true;
-            
+
             // act
-            migrator.Migrate(0);
+            Assert.Throws<BackupFailureException>(() => migrator.Migrate(0));
 
             // assert
         }
