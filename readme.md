@@ -47,15 +47,8 @@ The framework provides basic tracing by providing the **Migrator** or **Migratio
 
 For code examples review the unit-test project.
 
-## Todo ##
-- Add tests around 'nothing to migrate' situations.
-- Create small sample program with console application invoking a migration.
-- Create NuGet package.
-- Allow examination of a migration sequence before migrating.
-- Create cleaner/clearer 'hot' migration path.
-- Lock MigrationPointVersions.cfg while migrating.
-- Allow delegation of instantiation of MigrationPoint and migrations to a DI container (service locator).
-- Allow defining synchronization points between MigrationPoints.
+## Changed alpha 0.4 ##
+- ported to .NET core
 
 ## Changes alpha 0.3 ##
 - Renamed DataPoint to MigrationPoint (it's not only about data but also about configuration).
@@ -63,8 +56,6 @@ For code examples review the unit-test project.
 - Fix: MigrationPoints without any migrations results in exception.
 - Can now skip migrations by removing the Migrate attribute.
 - Progress reporting improvements: Now being more verbose about versioning requirements and targets.
-
-NOps.Migrator 0.3 alpha, june 26th, 2013
 
 License: MIT
 
